@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="轮腿式无人作战平台概念级系统工程分解：任务—体系—整机—系统—子系统—模块。">
+  <meta name="theme-color" content="#17231f">
+  <title>玄武 WL-X｜轮腿式无人作战平台系统工程分解</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#top" aria-label="返回首页">
+      <span class="brand-mark">玄</span>
+      <span><b>WL-X</b><small>系统工程概念方案</small></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#mission">任务</a>
+      <a href="#sos">体系</a>
+      <a href="#vehicle">整机</a>
+      <a href="#decomposition">系统分解</a>
+      <a href="#traceability">追溯验证</a>
+    </nav>
+    <button class="outline-button" id="presentationButton" type="button" aria-pressed="false">答辩模式</button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="live-dot"></span> 小组作业 01 · Complex Systems Engineering</div>
+          <h1 id="hero-title">轮腿协同，<br><em>把复杂地形变成可计算的通路。</em></h1>
+          <p class="lead">“玄武 WL-X”是一个概念级轮腿式无人作战平台。方案以侦察警戒为主任务，通过轮式高速、腿式越障、开放任务载荷和人在回路的任务控制，在体系协同中降低人员暴露风险。</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#decomposition">进入六层分解 <span>↓</span></a>
+            <button class="text-button" id="expandAllTop" type="button">展开全部架构</button>
+          </div>
+          <div class="assumption-note"><b>边界声明</b>：本页为课程概念设计；性能数字均是设计目标，不代表现役装备参数。武器效应必须由授权人员确认，平台不自主决定致命行动。</div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="轮腿式无人平台概念图">
+          <div class="coordinate coordinate-x"></div>
+          <div class="coordinate coordinate-y"></div>
+          <svg class="vehicle-illustration" viewBox="0 0 760 560" role="img" aria-labelledby="svgTitle svgDesc">
+            <title id="svgTitle">玄武 WL-X 轮腿式无人平台概念外形</title>
+            <desc id="svgDesc">四条可伸缩轮腿支撑低矮车体，顶部搭载桅杆感知组件和任务载荷。</desc>
+            <defs>
+              <linearGradient id="bodyG" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8f9d7b"/><stop offset="1" stop-color="#46594d"/></linearGradient>
+              <linearGradient id="glassG" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#cfe7d7"/><stop offset="1" stop-color="#5e8177"/></linearGradient>
+              <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="15" flood-opacity=".26"/></filter>
+            </defs>
+            <ellipse cx="383" cy="486" rx="278" ry="28" fill="#0e1815" opacity=".22"/>
+            <g opacity=".28" stroke="#d1dac1" stroke-width="1">
+              <path d="M40 450H720M40 400H720M40 350H720M40 300H720"/>
+              <path d="M120 275V500M220 275V500M320 275V500M420 275V500M520 275V500M620 275V500"/>
+            </g>
+            <g filter="url(#shadow)">
+              <path d="M188 270L252 218H534L612 276L568 359H216Z" fill="url(#bodyG)" stroke="#182923" stroke-width="8"/>
+              <path d="M267 231H493L526 274H236Z" fill="url(#glassG)" opacity=".9"/>
+              <path d="M238 286H562L541 333H223Z" fill="#263b33"/>
+              <path d="M292 218L324 179H470L494 218Z" fill="#4f6255" stroke="#182923" stroke-width="7"/>
+              <path d="M359 178V112H432V178" fill="#52685a" stroke="#182923" stroke-width="7"/>
+              <rect x="370" y="89" width="50" height="30" rx="7" fill="#162520"/>
+              <circle cx="385" cy="104" r="6" fill="#ef9c62"/><circle cx="405" cy="104" r="6" fill="#a8d7cc"/>
+              <path d="M432 150L482 127" stroke="#182923" stroke-width="7" stroke-linecap="round"/>
+              <circle cx="490" cy="124" r="12" fill="#ef9c62" stroke="#182923" stroke-width="5"/>
+              <rect x="264" y="294" width="56" height="19" rx="4" fill="#f0a06b"/>
+              <rect x="461" y="294" width="70" height="19" rx="4" fill="#cad6b8"/>
+              <text x="385" y="326" text-anchor="middle" fill="#cbd7c1" font-size="22" font-family="Arial, sans-serif" font-weight="700">WL-X / 04</text>
+            </g>
+            <g class="leg leg-a" fill="none" stroke="#24372f" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M250 336L195 397L160 455"/><path d="M520 336L580 397L615 455"/>
+            </g>
+            <g class="leg leg-b" fill="none" stroke="#5d6f61" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M319 341L285 410L272 464"/><path d="M452 341L488 410L501 464"/>
+            </g>
+            <g fill="#17231f" stroke="#9baa8f" stroke-width="9">
+              <circle cx="153" cy="465" r="50"/><circle cx="269" cy="470" r="43"/><circle cx="505" cy="470" r="43"/><circle cx="622" cy="465" r="50"/>
+            </g>
+            <g fill="none" stroke="#e6e8dc" stroke-width="5" opacity=".68">
+              <circle cx="153" cy="465" r="24"/><circle cx="269" cy="470" r="20"/><circle cx="505" cy="470" r="20"/><circle cx="622" cy="465" r="24"/>
+            </g>
+            <g class="callout"><path d="M453 104H620"/><circle cx="453" cy="104" r="4"/><text x="631" y="110">多模态感知桅杆</text></g>
+            <g class="callout"><path d="M553 306H690"/><circle cx="553" cy="306" r="4"/><text x="595" y="295">开放载荷接口</text></g>
+            <g class="callout"><path d="M173 410H62"/><circle cx="173" cy="410" r="4"/><text x="61" y="398" text-anchor="start">主动轮腿单元</text></g>
+          </svg>
+          <div class="visual-badge badge-a"><span>01</span>轮式巡航</div>
+          <div class="visual-badge badge-b"><span>02</span>腿式越障</div>
+          <div class="visual-badge badge-c"><span>03</span>姿态调平</div>
+          <div class="status-panel">
+            <div><span>任务状态</span><b>CONCEPT READY</b></div>
+            <div class="signal-bars" aria-label="四格信号"><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="layer-rail reveal" aria-label="六层系统分解路径">
+        <a href="#mission"><span>01</span><b>任务</b><small>Mission</small></a>
+        <a href="#sos"><span>02</span><b>体系</b><small>SoS</small></a>
+        <a href="#vehicle"><span>03</span><b>整机</b><small>Vehicle</small></a>
+        <a href="#decomposition"><span>04</span><b>系统</b><small>Systems</small></a>
+        <a href="#decomposition"><span>05</span><b>子系统</b><small>Subsystems</small></a>
+        <a href="#decomposition"><span>06</span><b>模块</b><small>Modules</small></a>
+      </div>
+    </section>
+
+    <section class="section section-light" id="mission">
+      <div class="section-heading reveal">
+        <div><span class="section-index">01 / MISSION</span><h2>先定义“为什么存在”</h2></div>
+        <p>在通信受限、地形破碎、人员风险较高的区域，以侦察警戒为主线，兼顾中继、运输和伤员后送等任务。</p>
+      </div>
+      <div class="mission-layout">
+        <article class="mission-primary reveal">
+          <span class="tag">主任务</span>
+          <h3>复杂地形前沿侦察与持续警戒</h3>
+          <p>在有人分队前方执行路线侦察、目标线索发现、环境建图与威胁预警，向指挥节点回传可追溯的信息产品。</p>
+          <div class="mission-flow" aria-label="侦察任务流程">
+            <span>受领任务</span><i>→</i><span>自主机动</span><i>→</i><span>多源感知</span><i>→</i><span>边缘融合</span><i>→</i><span>人工确认</span><i>→</i><span>共享态势</span>
+          </div>
+        </article>
+        <div class="mission-cards reveal">
+          <article><span>01</span><h3>通信中继</h3><p>为遮蔽地形中的人装节点提供临时自组网中继。</p></article>
+          <article><span>02</span><h3>物资伴随</h3><p>运送弹药、能源、医疗物资，降低单兵负荷。</p></article>
+          <article><span>03</span><h3>危险区探测</h3><p>挂载核生化、爆炸物或工程侦察载荷进行先期探测。</p></article>
+          <article><span>04</span><h3>伤员后送</h3><p>通过可替换担架模块将伤员转移至安全交接点。</p></article>
+        </div>
+      </div>
+      <div class="scenario-strip reveal">
+        <div><b>输入</b><span>任务包 / 地图 / 规则 / 编组信息</span></div>
+        <div><b>环境</b><span>碎石、沟壑、林地、楼梯、弱 GNSS</span></div>
+        <div><b>输出</b><span>态势图 / 目标线索 / 可通行域 / 健康状态</span></div>
+        <div><b>约束</b><span>人在回路 / 失联安全 / 电磁管控 / 载荷边界</span></div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="sos">
+      <div class="section-heading reveal">
+        <div><span class="section-index">02 / SYSTEM OF SYSTEMS</span><h2>它不是孤立的机器人</h2></div>
+        <p>平台是联合任务网络中的一个自主节点：从上级接收意图，与空地传感器协同，并把信息送到有权决策的人。</p>
+      </div>
+      <div class="sos-board reveal">
+        <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div>
+        <article class="sos-node node-center"><span>核心节点</span><b>WL-X<br>轮腿平台</b><small>机动 · 感知 · 计算 · 载荷</small></article>
+        <article class="sos-node node-1"><i>01</i><b>战术指挥与控制体系</b><small>任务规划 / 授权 / 态势融合</small></article>
+        <article class="sos-node node-2"><i>02</i><b>有人作战分队</b><small>协同编组 / 监督控制 / 接管</small></article>
+        <article class="sos-node node-3"><i>03</i><b>无人机侦察体系</b><small>空地协同 / 越障观察 / 定位辅助</small></article>
+        <article class="sos-node node-4"><i>04</i><b>战术通信导航体系</b><small>自组网 / 中继 / 授时与组合导航</small></article>
+        <article class="sos-node node-5"><i>05</i><b>火力与效应体系</b><small>目标线索移交 / 人工授权 / 效果评估</small></article>
+        <article class="sos-node node-6"><i>06</i><b>保障与训练体系</b><small>能源补给 / 维修 / 仿真 / 数据闭环</small></article>
+      </div>
+      <div class="sos-legend reveal"><b>关键体系接口</b><span><i class="dot data"></i>数据：任务包、态势、健康状态</span><span><i class="dot control"></i>控制：授权、模式切换、紧急停车</span><span><i class="dot physical"></i>物理：运输、补能、载荷快换</span></div>
+    </section>
+
+    <section class="section section-sand" id="vehicle">
+      <div class="section-heading reveal">
+        <div><span class="section-index">03 / VEHICLE</span><h2>整机：玄武 WL-X</h2></div>
+        <p>面向班排级伴随与侦察的中型电驱平台；以模块化、低轮廓、轮腿融合和开放架构为核心设计原则。</p>
+      </div>
+      <div class="vehicle-spec-layout">
+        <div class="spec-grid reveal">
+          <article><span>战斗全重 · 目标</span><b>≤ 2.4<small> t</small></b><p>含基础侦察载荷</p></article>
+          <article><span>道路速度 · 目标</span><b>45<small> km/h</small></b><p>轮式巡航模式</p></article>
+          <article><span>持续任务 · 目标</span><b>8<small> h</small></b><p>典型混合工况</p></article>
+          <article><span>有效载荷 · 目标</span><b>350<small> kg</small></b><p>标准任务接口</p></article>
+          <article><span>垂直越障 · 目标</span><b>0.6<small> m</small></b><p>感知辅助腿式模式</p></article>
+          <article><span>涉水深度 · 目标</span><b>0.8<small> m</small></b><p>短时通过</p></article>
+        </div>
+        <article class="mode-controller reveal">
+          <div class="mode-head"><span>机动模式逻辑</span><b id="modeTitle">轮式巡航</b></div>
+          <div class="mode-track" role="tablist" aria-label="机动模式">
+            <button class="active" type="button" role="tab" aria-selected="true" data-mode="wheel">轮式</button>
+            <button type="button" role="tab" aria-selected="false" data-mode="hybrid">轮腿协同</button>
+            <button type="button" role="tab" aria-selected="false" data-mode="leg">腿式</button>
+            <button type="button" role="tab" aria-selected="false" data-mode="safe">安全姿态</button>
+          </div>
+          <p id="modeDescription">在硬质路面和缓坡上优先采用高效率轮式滚动，腿部保持中位并主动吸振。</p>
+          <div class="mode-bars"><div><span>速度</span><i><b id="barSpeed" style="width:92%"></b></i></div><div><span>越障</span><i><b id="barObstacle" style="width:30%"></b></i></div><div><span>能效</span><i><b id="barEfficiency" style="width:88%"></b></i></div></div>
+        </article>
+      </div>
+      <div class="design-principles reveal">
+        <span>设计原则</span>
+        <article><b>01</b><p><strong>任务模块化</strong>标准机械、电源、数据接口支持侦察、中继、运输等载荷快速替换。</p></article>
+        <article><b>02</b><p><strong>降级可运行</strong>单传感器、单链路或单轮腿故障时进入受限能力模式，而非直接失效。</p></article>
+        <article><b>03</b><p><strong>人机权限清晰</strong>导航可自主，任务可监督，致命效应保持人工确认和双重安全链。</p></article>
+      </div>
+    </section>
+
+    <section class="section section-light" id="decomposition">
+      <div class="section-heading reveal">
+        <div><span class="section-index">04–06 / SYSTEM → SUBSYSTEM → MODULE</span><h2>完整分解到可分配模块</h2></div>
+        <p>选择系统卡片查看其职责、子系统和模块。搜索可直接定位术语；所有条目均可折叠，便于课堂答辩。</p>
+      </div>
+      <div class="architecture-toolbar reveal">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="architectureSearch" type="search" placeholder="搜索系统、子系统或模块…" autocomplete="off"></label>
+        <div class="filter-pills" role="group" aria-label="系统类别筛选">
+          <button type="button" class="active" data-filter="all">全部</button>
+          <button type="button" data-filter="mission">任务能力</button>
+          <button type="button" data-filter="platform">平台基础</button>
+          <button type="button" data-filter="assurance">安全保障</button>
+        </div>
+        <button class="outline-button dark-outline" id="expandAll" type="button">全部展开</button>
+      </div>
+      <div class="architecture-summary reveal" id="architectureSummary" aria-live="polite"></div>
+      <div class="architecture-grid" id="architectureGrid"></div>
+      <div class="no-results" id="noResults" hidden>没有匹配项，请尝试“导航”“热管理”或“急停”。</div>
+    </section>
+
+    <section class="section section-dark" id="traceability">
+      <div class="section-heading reveal">
+        <div><span class="section-index">TRACEABILITY</span><h2>需求必须落到系统，系统必须接受验证</h2></div>
+        <p>用任务—系统追溯矩阵避免“有模块、没用途”，并用验证闭环避免“有指标、无法证明”。</p>
+      </div>
+      <div class="matrix-wrap reveal" tabindex="0" aria-label="任务到系统追溯矩阵，可横向滚动">
+        <table id="traceabilityMatrix">
+          <thead><tr><th>任务 / 系统</th><th>感知定位</th><th>任务自治</th><th>机动底盘</th><th>通信协同</th><th>任务载荷</th><th>能源热控</th><th>安全防护</th></tr></thead>
+          <tbody>
+            <tr><th>前沿侦察</th><td class="primary">主</td><td class="primary">主</td><td class="support">支</td><td class="primary">主</td><td class="support">支</td><td class="support">支</td><td class="support">支</td></tr>
+            <tr><th>持续警戒</th><td class="primary">主</td><td class="primary">主</td><td>—</td><td class="primary">主</td><td class="support">支</td><td class="primary">主</td><td class="support">支</td></tr>
+            <tr><th>通信中继</th><td class="support">支</td><td class="support">支</td><td class="support">支</td><td class="primary">主</td><td class="primary">主</td><td class="primary">主</td><td class="support">支</td></tr>
+            <tr><th>物资伴随</th><td class="support">支</td><td class="primary">主</td><td class="primary">主</td><td class="support">支</td><td class="primary">主</td><td class="support">支</td><td class="primary">主</td></tr>
+            <tr><th>危险区探测</th><td class="primary">主</td><td class="support">支</td><td class="support">支</td><td class="primary">主</td><td class="primary">主</td><td class="support">支</td><td class="primary">主</td></tr>
+            <tr><th>伤员后送</th><td class="support">支</td><td class="primary">主</td><td class="primary">主</td><td class="primary">主</td><td class="primary">主</td><td class="support">支</td><td class="primary">主</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="verification-grid reveal">
+        <article><span>V1 · 分析</span><h3>模型与仿真</h3><p>越障几何、稳定裕度、能量预算、通信覆盖和热平衡。</p></article>
+        <article><span>V2 · 检查</span><h3>接口与安全审查</h3><p>接口控制文件、权限矩阵、故障树、网络安全基线。</p></article>
+        <article><span>V3 · 试验</span><h3>台架与环境试验</h3><p>轮腿耐久、振动冲击、防尘防水、EMC、热循环。</p></article>
+        <article><span>V4 · 演示</span><h3>任务场景演示</h3><p>弱 GNSS、链路中断、复杂地形、人工接管和安全停车。</p></article>
+      </div>
+    </section>
+
+    <section class="section section-sand" id="interfaces">
+      <div class="section-heading reveal">
+        <div><span class="section-index">CLOSED LOOP</span><h2>一条典型信息闭环</h2></div>
+        <p>从环境进入感知链，再进入决策与执行；监督控制、健康管理和安全监控贯穿全程。</p>
+      </div>
+      <div class="loop-diagram reveal">
+        <article><span>01</span><b>环境 / 任务</b><small>地形、目标线索、规则</small></article><i>→</i>
+        <article><span>02</span><b>感知与定位</b><small>时间同步、多源融合</small></article><i>→</i>
+        <article><span>03</span><b>态势理解</b><small>语义、风险、可通行域</small></article><i>→</i>
+        <article><span>04</span><b>规划与控制</b><small>行为、路径、运动控制</small></article><i>→</i>
+        <article><span>05</span><b>执行机构</b><small>轮腿、载荷、通信</small></article>
+        <div class="feedback-line"><span>状态反馈 / 人工监督 / 安全约束</span></div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="sources">
+      <div class="section-heading compact reveal">
+        <div><span class="section-index">BASIS & SOURCES</span><h2>设计依据与参考资料</h2></div>
+        <p>现实资料只用于支撑设计方法和技术趋势；“玄武 WL-X”及其指标为课程概念方案。</p>
+      </div>
+      <div class="sources-grid reveal">
+        <a href="https://www.iso.org/standard/81702.html" target="_blank" rel="noreferrer"><span>01 · 标准</span><b>ISO/IEC/IEEE 15288:2023</b><p>系统生命周期过程与递归分解框架。</p><i>↗</i></a>
+        <a href="https://www.darpa.mil/research/programs/robotic-autonomy-in-complex-environments-with-resiliency" target="_blank" rel="noreferrer"><span>02 · 官方项目</span><b>DARPA RACER</b><p>复杂非结构化地形中的无人地面自主机动。</p><i>↗</i></a>
+        <a href="https://www.army.mil/article/270093" target="_blank" rel="noreferrer"><span>03 · 官方项目</span><b>U.S. Army RCV</b><p>轻量、模块化、可升级的无人战斗车辆方向。</p><i>↗</i></a>
+        <a href="https://www.ghostrobotics.io/vision-60" target="_blank" rel="noreferrer"><span>04 · 工程实例</span><b>Ghost Robotics Vision 60</b><p>模块化腿式平台、快速换件与多种控制接口实例。</p><i>↗</i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><span class="brand-mark">玄</span><p><b>玄武 WL-X</b><small>轮腿式无人作战平台 · 概念系统工程分解</small></p></div>
+    <p class="footer-note">课程作业 · 非真实装备方案 · 更新于 2026.11</p>
+    <a href="#top">返回顶部 ↑</a>
+  </footer>
+
+  <div class="presentation-hint" id="presentationHint" role="status" aria-live="polite"></div>
+</body>
+</html>
