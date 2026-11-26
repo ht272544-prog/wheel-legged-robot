@@ -1,0 +1,75 @@
+{
+  "boot": {
+    "view": "module4",
+    "title": "玄武 WL-X｜轮腿式无人作战平台",
+    "sections": true,
+    "nav": true,
+    "card": true,
+    "metaLanguage": false
+  },
+  "content": {
+    "branches": 3,
+    "elements": 11,
+    "odcRows": 12,
+    "phases": 6,
+    "risks": 9,
+    "images": [
+      {
+        "src": "assets/scenarios/wlx-scenario-hero-v2.png",
+        "loaded": true,
+        "w": 1122
+      },
+      {
+        "src": "assets/scenarios/wlx-scenario-hero-v2.png",
+        "loaded": true,
+        "w": 1122
+      },
+      {
+        "src": "assets/scenarios/wlx-odc-dashboard.png",
+        "loaded": true,
+        "w": 1672
+      },
+      {
+        "src": "assets/scenarios/wlx-mountain-route.png",
+        "loaded": true,
+        "w": 1672
+      },
+      {
+        "src": "assets/scenarios/wlx-risk-scene.png",
+        "loaded": true,
+        "w": 1672
+      }
+    ]
+  },
+  "typography": {
+    "display": 76.32,
+    "section": 53.28,
+    "body": 18,
+    "card": 28.8,
+    "rail": [
+      22,
+      22,
+      22,
+      22,
+      22
+    ]
+  },
+  "interactions": {
+    "element": "数字信息环境",
+    "condition": "SAFE STATE",
+    "phase": "异常撤离",
+    "risk": "山谷遮挡导致通信中断"
+  },
+  "desktop": {
+    "overflow": -15,
+    "visible": true
+  },
+  "mobile": {
+    "overflow": 0,
+    "navOverflow": 118,
+    "bodySize": 16,
+    "visible": true
+  },
+  "consoleErrors": [],
+  "failedRequests": []
+}

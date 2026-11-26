@@ -1,0 +1,11 @@
+# Local browser QA profiles and generated evidence are not part of the website.
+chromeqa*/
+qa/
+*.log
+Thumbs.db
+.DS_Store
+
+# Keep these deployment directories tracked:
+# assets/
+# data/
+# documents/

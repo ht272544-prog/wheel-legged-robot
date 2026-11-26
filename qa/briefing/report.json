@@ -1,0 +1,596 @@
+{
+  "boot": {
+    "view": "briefing",
+    "slides": 36,
+    "start": true,
+    "frame": {
+      "w": 1920,
+      "h": 1080,
+      "ratio": 1.7778
+    },
+    "pageScroll": 0,
+    "forbidden": false
+  },
+  "cover": {
+    "loaded": true,
+    "natural": [
+      1672,
+      941
+    ],
+    "inside": true,
+    "credit": "封面机器人模型：段欣雨绘制",
+    "active": 0
+  },
+  "map": {
+    "active": 1,
+    "nodes": 5,
+    "labels": [
+      "系统认知",
+      "需求定义",
+      "架构构建",
+      "场景与风险",
+      "综合总结"
+    ]
+  },
+  "architecture": {
+    "active": 18,
+    "tab": "物理视图",
+    "view": "physical",
+    "detail": "轮腿执行机构"
+  },
+  "terrain": {
+    "active": 23,
+    "mode": "03通信",
+    "readout": "间歇弱链路"
+  },
+  "risk": {
+    "active": 26,
+    "selected": "R-04 急停无效",
+    "detail": "急停请求未产生预期失能",
+    "codes": [
+      "R-01 表面打滑",
+      "R-02 路径阻断",
+      "R-03 定位失效",
+      "R-04 急停无效"
+    ]
+  },
+  "returnMap": 1,
+  "layout1920": {
+    "overflow": [],
+    "minBody": 15.36,
+    "bodyOverflow": 0,
+    "frameBottom": 1080,
+    "navTop": 1020.71875
+  },
+  "layout1366": {
+    "frame": {
+      "w": 1365.328125,
+      "h": 768,
+      "ratio": 1.7778
+    },
+    "pageScroll": 0,
+    "overflow": []
+  },
+  "evidence": {
+    "active": 28,
+    "title": "系统认知结论：从任务目标建立完整的系统层级",
+    "figures": 0
+  },
+  "controls": {
+    "prev": true,
+    "map": true,
+    "next": true,
+    "fullscreen": true,
+    "print": true,
+    "legacy": false
+  },
+  "allSlides": [
+    {
+      "i": 0,
+      "title": "封面",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": [
+        {
+          "ok": true,
+          "natural": [
+            1672,
+            941
+          ],
+          "fit": "cover"
+        }
+      ]
+    },
+    {
+      "i": 1,
+      "title": "综合汇报任务总览",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 2,
+      "title": "系统认知",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 3,
+      "title": "任务：先定义平台必须带回什么结果",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": [
+        {
+          "ok": true,
+          "natural": [
+            1672,
+            941
+          ],
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "i": 4,
+      "title": "体系：平台必须嵌入更大的任务网络",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 5,
+      "title": "整机：四轮腿构型兼顾效率、通过性与稳定",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": [
+        {
+          "ok": true,
+          "natural": [
+            1448,
+            1086
+          ],
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "i": 6,
+      "title": "系统：十个一级系统围绕任务闭环协同",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 7,
+      "title": "子系统：把一级职责分配到可集成单元",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": [
+        {
+          "ok": true,
+          "natural": [
+            1400,
+            1050
+          ],
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "i": 8,
+      "title": "模块：终端组件必须带着接口和证据进入集成",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 9,
+      "title": "需求定义",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 10,
+      "title": "业务/任务：先回答为什么需要这个系统",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 11,
+      "title": "BRS：把预期效果写成业务级承诺",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 12,
+      "title": "运营概念：说明多组织如何共同完成任务",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 13,
+      "title": "运行概念：说明平台在每个状态怎样工作",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 14,
+      "title": "相关方：识别谁提出需求、谁承担影响",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 15,
+      "title": "StRS：把相关方诉求写成可验收需求",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 16,
+      "title": "架构构建",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 17,
+      "title": "系统需求规格书：建立可分配、可验证的技术基线",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 18,
+      "title": "初始系统架构：用多视图回答做什么、谁负责、如何落地",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 19,
+      "title": "系统控制框图：控制权和反馈必须形成闭环",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 20,
+      "title": "安全需求与架构：把危险改写为可验证约束",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": [
+        {
+          "ok": true,
+          "natural": [
+            1672,
+            941
+          ],
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "i": 21,
+      "title": "场景与风险",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 22,
+      "title": "场景分层：先固定范围，再叠加动态变化",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": [
+        {
+          "ok": true,
+          "natural": [
+            1672,
+            941
+          ],
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "i": 23,
+      "title": "场景要素：用参数替代“恶劣、复杂、危险”",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": [
+        {
+          "ok": true,
+          "natural": [
+            1672,
+            941
+          ],
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "i": 24,
+      "title": "运行设计条件：范围、平台与人员共同决定能否进入",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 25,
+      "title": "典型场景：复杂山地前沿侦察与信息回传",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": [
+        {
+          "ok": true,
+          "natural": [
+            1672,
+            941
+          ],
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "i": 26,
+      "title": "安全风险场景：风险必须绑定触发、响应、证据与验证",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": [
+        {
+          "ok": true,
+          "natural": [
+            1672,
+            941
+          ],
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "i": 27,
+      "title": "综合总结",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 28,
+      "title": "系统认知结论：从任务目标建立完整的系统层级",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 29,
+      "title": "需求定义结论：从任务场景形成可追溯、可验证的需求基线",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 30,
+      "title": "架构构建结论：让需求、功能、控制与安全形成闭环",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 31,
+      "title": "场景与风险结论：用真实运行条件检验系统设计",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 32,
+      "title": "综合结论：以任务需求牵引系统设计，以场景验证闭合工程链路",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 33,
+      "title": "从系统定义走向工程验证",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 34,
+      "title": "从专业分析到综合呈现",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": []
+    },
+    {
+      "i": 35,
+      "title": "汇报完毕",
+      "scroll": [
+        0,
+        0
+      ],
+      "clipped": [],
+      "overlaps": [],
+      "images": [
+        {
+          "ok": true,
+          "natural": [
+            1536,
+            1024
+          ],
+          "fit": "contain"
+        }
+      ]
+    }
+  ],
+  "print": {
+    "slides": 36,
+    "visible": 36,
+    "size": [
+      [
+        1280,
+        720
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        1280,
+        720
+      ]
+    ],
+    "nav": "none"
+  },
+  "consoleErrors": [],
+  "failedRequests": []
+}
